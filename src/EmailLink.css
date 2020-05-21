@@ -1,0 +1,20 @@
+.mail-icon {
+    position: relative;
+    width: 300px;
+}
+
+.mail-badge {
+    position: absolute;
+    top: 140px;
+    left: 610px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: purple;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 2em;
+}
+

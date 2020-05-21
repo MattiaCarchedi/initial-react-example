@@ -1,0 +1,56 @@
+.fanPage {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+
+}
+.wrapper {
+    display: flex;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background-color:#fc7e2f;
+    border-radius: 30%;
+    border: solid 1px black;
+
+}
+
+.screen {
+    margin: 20px;
+    width:380px;
+    height: 350px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: solid 1px black;
+}
+
+ img {
+  width: 300px;
+   
+    
+
+}
+
+
+
+  .blade__active {
+    transform-origin: center;
+    animation: rotation 0.2s infinite linear;
+} 
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
