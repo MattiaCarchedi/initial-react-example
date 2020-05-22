@@ -274,8 +274,9 @@ const App = () => (
 
                                         120 km/h
                                         <Speed kmH={120}/>
-                                        200 km/h
-                                        <Speed kmH={200}/>
+
+                                        180 km/h
+                                        <Speed kmH={180}/>
 
 
                                         </div>
