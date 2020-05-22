@@ -8,6 +8,8 @@ import Clock from './Clock';
 import NotificationLink from './NotificationLink';
 import EmailLink from './EmailLink';
 import Speed from './Speed';
+import TrafficLightsControlledWithBtns from './TrafficLightsControlledWithBtns';
+import TrafficLightAuto from './TrafficLightAuto';
 
 import './App.css';
 
@@ -36,6 +38,26 @@ const App = () => (
                 }
             >
                 Traffic lights
+            </a>
+
+            <a
+                href="/?page=traffic-lights-ctrl"
+                className={
+                    'sidebar-navigation-item ' +
+                    (window.location.search === '?page=traffic-lights-ctrl' && 'sidebar-navigation-item--active')
+                }
+            >
+                Controlled traffic light 
+            </a>
+
+            <a
+                href="/?page=traffic-lights-auto"
+                className={
+                    'sidebar-navigation-item ' +
+                    (window.location.search === '?page=traffic-lights-auto' && 'sidebar-navigation-item--active')
+                }
+            >
+                Automatic switching traffic light 
             </a>
 
             <a 
@@ -103,6 +125,10 @@ const App = () => (
                 {window.location.search === '' && 'Cats gallery'}
 
                 {window.location.search === '?page=traffic-lights' && 'Traffic lights'}
+
+                {window.location.search === '?page=traffic-lights-ctrl' && 'Controlled traffic light'}
+
+                {window.location.search === '?page=traffic-lights-auto' && 'Automatic switching traffic light'}
 
                 {window.location.search === '?page=fans' && 'Fan'}
 
@@ -178,6 +204,28 @@ const App = () => (
                    
            )}
        
+       {window.location.search === '?page=traffic-lights-ctrl' && (
+                 <div className="main-section__content">
+                    <h1>
+                        Controlled traffic light
+                    </h1>
+
+                   
+
+                        <TrafficLightsControlledWithBtns/>
+                 </div>
+       )}
+
+        {window.location.search === '?page=traffic-lights-auto' && (
+                 <div className="main-section__content">
+                    <h1>
+                        Automatic switching traffic light
+                    </h1>
+                       
+                        <TrafficLightAuto/>
+
+                 </div>
+       )}
         
             {window.location.search === '?page=fans' && (
                         <div className="main-section__content">
