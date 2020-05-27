@@ -5,7 +5,7 @@ import './Speed.css';
 const Speed = (props) => {
 
 
-    const kmH =  (180 / 20 / 10) * props.kmH ;
+    const kmH = props.kmH ;
     const styleSpeed = { transform: `rotate(${kmH}deg)`};
 
     return (
@@ -14,7 +14,7 @@ const Speed = (props) => {
         <div className="speed-back">
             <div className="bow" >
                 <div className="pointer" style={styleSpeed}></div>
-                  <p className={kmH <= 120 ? 'ball' : 'ball-fast'}> {(props.kmH)}</p>
+                  <p className={kmH < 120 ? 'ball' : 'ball-fast'}> {(kmH)}</p>
                 
             </div>
 

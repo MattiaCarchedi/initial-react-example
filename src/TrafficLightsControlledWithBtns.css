@@ -1,3 +1,13 @@
+.ctrl-traffic-light {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.traffic-light-btns {
+ display: flex;
+}
+
 .traffic-light-btns  button {
     padding: 10px;
     border-radius: 10px;
@@ -5,6 +15,9 @@
     outline: none;
     text-transform: capitalize;
     font-weight: 900;
+   
+   
+
 
 }
 

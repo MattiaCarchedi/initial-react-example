@@ -2,10 +2,16 @@ import React from 'react';
 import './EmailLink.css';
 
 
-const EmailLink = (props) => {
+class EmailLink extends React.Component {
+    render() {
+        const time = (new Date);
+   
+         
 
+
+    
     const mailIcon = "./email-black-48dp.svg";
-    const unread = props.numberOfUnread;
+    const unread = this.props.numberOfUnread;
 
     return (
 
@@ -21,8 +27,12 @@ const EmailLink = (props) => {
         
         </div>
 
+        <div>
+            <p>It's {time.toString()} </p>
+        </div>
+
          </div>
     );
 };
-
+}
 export default EmailLink;

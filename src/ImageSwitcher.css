@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.image-switcher-wrapper {
+    margin: 3em 0;
+
+   
+}
+
+.image-switcher__content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    
+
+}
+
+.image-switcher__image {
+    width: 100%;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0.5em 0.5em 0.2em 0px rgba(173,170,173,1);
+}
+
+.image-switcher__button-back,
+.image-switcher__button-forward {
+                                     
+    outline: none;
+    margin: 1.5em;
+    height: 40px;
+    width: 40px;
+    padding: 0 0.5em;
+    border-style: none;
+    border-radius: 50%;
+    background-color: #4b9c7f ;
+    color: white;
+    text-align: center;
+    font-family:'Shadows Into Light', cursive;
+    font-size: 1.5em;
+    font-weight: 900;
+    
+}
+
+.image-switcher__navbar {
+    display: flex;
+    margin: 1.5em;
+    height: 2.5em;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 5px 5px;
+    
+}
+.image-switcher__button-current {
+    border-radius: 50%;
+    margin: 2.5em;
+    width: 20px;
+    height: 20px;
+    background-color: #4b9c7f;
+    outline: none;
+    border-style: none;
+
+}
+
+ .image-switcher__button-current--active {
+    border-radius: 50%;
+    margin: 2.5em;
+    width: 20px;
+    height: 20px;
+    background-color: #424140;
+    outline: none;
+    border-style: none;
+} 

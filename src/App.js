@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Navigation from './components/navigation/Navigation';
+import Toolbar from './components/navigation/Toolbar';
 import cats from './cats';
 import FrameForImage from './FrameForImage';
 import TrafficLights from './TrafficLights';
@@ -10,140 +12,41 @@ import EmailLink from './EmailLink';
 import Speed from './Speed';
 import TrafficLightsControlledWithBtns from './TrafficLightsControlledWithBtns';
 import TrafficLightAuto from './TrafficLightAuto';
+import AddressBook from './AddressBook';
+import ImageSwitcher from './ImageSwitcher';
+import insects from './insects';
 
 import './App.css';
+
 
 const App = () => (
     <div className="app">
         <div className="left-sidebar left-sidebar--visible">
             <div className="left-sidebar__toolbar">
                 Navigation
+
             </div>
 
-            <a
-                href="/"
-                className={
-                   'sidebar-navigation-item ' +
-                   (window.location.search === '' && 'sidebar-navigation-item--active') 
-                }
-            >
-                Cats gallery
-            </a>
+     
+                <Navigation/>
 
-            <a
-                href="/?page=traffic-lights"
-                className={
-                    'sidebar-navigation-item ' +
-                    (window.location.search === '?page=traffic-lights' && 'sidebar-navigation-item--active')
-                }
-            >
-                Traffic lights
-            </a>
-
-            <a
-                href="/?page=traffic-lights-ctrl"
-                className={
-                    'sidebar-navigation-item ' +
-                    (window.location.search === '?page=traffic-lights-ctrl' && 'sidebar-navigation-item--active')
-                }
-            >
-                Controlled traffic light 
-            </a>
-
-            <a
-                href="/?page=traffic-lights-auto"
-                className={
-                    'sidebar-navigation-item ' +
-                    (window.location.search === '?page=traffic-lights-auto' && 'sidebar-navigation-item--active')
-                }
-            >
-                Automatic switching traffic light 
-            </a>
-
-            <a 
-                href="/?page=fans"
-                className={
-                    'sidebar-navigation-item ' +
-                    (window.location.search === '?page=fans' && 'sidebar-navigation-item--active')
-                }
-            >
-                Fan
-            </a>
-
-            <a 
-                href="/?page=clock"
-                className={
-                    'sidebar-navigation-item ' +
-                    (window.location.search === '?page=clock' && 'sidebar-navigation-item--active')
-                }
-            >
-                
-                Clock
-            </a>
-
-            <a 
-                href="/?page=notifications"
-                className={
-                    'sidebar-navigation-item ' +
-                    (window.location.search === '?page=notifications' && 'sidebar-navigation-item--active')
-                 }
-                 
-            >
-                Notification
-
-            </a>
-            
-            <a 
-                href="/?page=email"
-                className={
-                    'sidebar-navigation-item ' +
-                    (window.location.search === '?page=email' && 'sidebar-navigation-item--active')
-                }
-            >
-                E-mail
-
-            </a>
-
-            <a 
-                href="/?page=speedometer"
-                className={
-                    'sidebar-navigation-item ' +
-                    (window.location.search === '?page=speedometer' && 'sidebar-navigation-item--active')
-                }
-            >
-                Speedometer
-
-            </a>
-
-
-        </div>
+            </div>
 
         <div div className="main-section main-section--with-left-sidebar">
+
         <div>
+
             <div className="main-section__toolbar">
-
-                {window.location.search === '' && 'Cats gallery'}
-
-                {window.location.search === '?page=traffic-lights' && 'Traffic lights'}
-
-                {window.location.search === '?page=traffic-lights-ctrl' && 'Controlled traffic light'}
-
-                {window.location.search === '?page=traffic-lights-auto' && 'Automatic switching traffic light'}
-
-                {window.location.search === '?page=fans' && 'Fan'}
-
-                {window.location.search === '?page=clock' && 'My clock'}
-
-                {window.location.search === '?page=notifications' && 'E-mail'}
                 
-                {window.location.search === '?page=speedometer' && 'My Speedometer'}
+                 <Toolbar/>
+                
             </div>
         
        </div>
 
-       
+       <div className="main-section__content">
 
-           {window.location.search === '' && (
+       {window.location.search === '' && (
                 <div className="main-section__content">
                 <h1>
                     Some cat pictures here :-)
@@ -333,6 +236,48 @@ const App = () => (
                                     </div>
                                 )}  
 
+            {window.location.search === '?page=address-book' &&  (
+                                <div className="main-section__content">
+
+                                    <h1>
+                                        My Address Book
+                                    </h1>
+
+                                        <div className="">
+
+                                         <AddressBook/>
+
+
+                                        </div>
+                                
+
+                                    </div>
+                                )}  
+
+            {window.location.search === '?page=image-switcher' &&  (
+                                <div className="main-section__content">
+
+                                    <h1>
+                                        Image Switcher
+                                    </h1>
+
+                                        <div className="">
+
+                                        <ImageSwitcher 
+                                        />
+
+
+
+
+
+                            </div>
+                    
+
+                        </div>
+                    )}  
+       </div>
+
+          
         </div>
 
    </div> 
