@@ -14,31 +14,35 @@ export default class ImageSwitcher extends React.Component {
     render() {
       const back = '<' ;
       const forward = '>';
-      const selectedIndex = this.state.selectedIndex;
+      const {selectedIndex} = this.state;
+    
 
         return (
             <div className="image-switcher-wrapper">
                 <div className="image-switcher__content-wrapper">
                     <div>
                         <button 
-                        onClick={() => {selectedIndex === 0 ? this.setState({selectedIndex: insects.length -1}) : this.setState({selectedIndex: selectedIndex - 1,})}}
+                        onClick={() => {selectedIndex === 0 ? this.setState({selectedIndex: this.props.children.length - 1}) : this.setState({selectedIndex: selectedIndex - 1,})}}
                             
-     className="image-switcher__button-back image-switcher__button-back--active">{back}</button>
+                         className="image-switcher__button-back image-switcher__button-back--active">{back}</button>
                     </div>
                     <div>
-                        <img className="image-switcher__image" src={insects[this.state.selectedIndex].image}/>
+                       
+                       <div className="image-switcher__image"> 
+                           {this.props.children[selectedIndex]}
+                       </div>
                     </div>
                     <div>
                         <button 
                         onClick={(e) => {
                             e.preventDefault();
-                            const newIndex = this.state.selectedIndex + 1; 
+                            const newIndex = selectedIndex + 1; 
 
-                            if (this.state.selectedIndex < insects.length - 1) {
+                            if (selectedIndex < this.props.children.length - 1) {
                         this.setState({
                             selectedIndex: newIndex,
                         })
-                    } else {
+                        } else {
                         this.setState({
                             selectedIndex: 0,
                         })
@@ -53,20 +57,15 @@ export default class ImageSwitcher extends React.Component {
         
         <div className="image-switcher__navbar">
             
-            <button 
-            onClick={() => this.setState({selectedIndex: 0})}
-            className={(selectedIndex === 0 ? 'image-switcher__button-current--active' :'image-switcher__button-current')}
-            ></button>
-
-            <button 
-            onClick={() => this.setState({selectedIndex: 1})}
-            className={(selectedIndex === 1 ? 'image-switcher__button-current--active' :'image-switcher__button-current')} ></button>
-
-            <button 
-            onClick={() => this.setState({selectedIndex: 2})} className={(selectedIndex === 2 ? 'image-switcher__button-current--active' :'image-switcher__button-current')} ></button>
-            
-            <button 
-            onClick={() => this.setState({selectedIndex: 3})} className={(selectedIndex === 3 ? 'image-switcher__button-current--active' :'image-switcher__button-current')}></button> 
+            {this.props.children.map(( _, index) => {
+                return (
+                    <button 
+                    onClick={() => this.setState({selectedIndex: index})}
+                    className={(selectedIndex === index ? 'image-switcher__button-current--active' :'image-switcher__button-current')}
+                    ></button>
+                )
+            })}
+           
 
         </div>
 

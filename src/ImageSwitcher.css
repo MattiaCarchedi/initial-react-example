@@ -41,6 +41,12 @@
     font-weight: 900;
     
 }
+.image-switcher__button-back:hover,
+.image-switcher__button-forward:hover {
+   
+    background-color:#424140;
+    color: white;
+}
 
 .image-switcher__navbar {
     display: flex;

@@ -5,7 +5,7 @@ import Toolbar from './components/navigation/Toolbar';
 import cats from './cats';
 import FrameForImage from './FrameForImage';
 import TrafficLights from './TrafficLights';
-import Fan from './Fan';
+import DesktopFan from './DesktopFan';
 import Clock from './Clock';
 import NotificationLink from './NotificationLink';
 import EmailLink from './EmailLink';
@@ -137,9 +137,9 @@ const App = () => (
                             </h1>
                             
                         <div className="fanPage">
-                            <Fan isOn={true} />
+                            <DesktopFan isOn={true} />
 
-                            <Fan isOn={false} />
+                            <DesktopFan isOn={false} />
                         </div>
 
                             
@@ -263,9 +263,12 @@ const App = () => (
 
                                         <div className="">
 
-                                        <ImageSwitcher 
-                                        />
-
+                                        <ImageSwitcher>
+                                            <img src="./butterfly.jpg" alt="butterfly"/>
+                                            <img src="./ants.jpg" alt="ants"/>
+                                            <img src="./grasshopper.jpg" alt="grasshopper"/>
+                                            <img src="./dragonfly.jpg" alt="dragonfly"/>
+                                        </ImageSwitcher>
 
 
 

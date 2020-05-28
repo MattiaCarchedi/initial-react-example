@@ -27,9 +27,6 @@ class EmailLink extends React.Component {
         
         </div>
 
-        <div>
-            <p>It's {time.toString()} </p>
-        </div>
 
          </div>
     );

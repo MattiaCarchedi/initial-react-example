@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './Fan.css';
+import './DesktopFan.css';
 
-const Fan = (props) => {
+const DesktopFan = (props) => {
     return (
         <div className="wrapper">
          <div className="screen">
@@ -15,4 +15,4 @@ const Fan = (props) => {
     );
 };
 
-export default Fan;
+export default DesktopFan;
